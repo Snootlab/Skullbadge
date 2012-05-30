@@ -1,0 +1,570 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_mulhi3.o)
+                              zombie.o (__mulhi3)
+/usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_udivmodhi4.o)
+                              ../common/common.o (__udivmodhi4)
+/usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o (exit)
+/usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+                              zombie.o (__do_copy_data)
+/usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+                              ../common/common.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+                              zombie.o (__eerd_byte_tn85)
+/usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+                              zombie.o (__eewr_byte_tn85)
+
+Allocating common symbols
+Common symbol       size              file
+
+RGB_green           0x3               ../common/common.o
+RGB_off             0x3               ../common/common.o
+RGB_alternative_rcv
+                    0x3               ../common/common.o
+state               0x5               ../common/common.o
+ir_rcv              0xc               ../common/common.o
+RGB_alternative_emt
+                    0x3               ../common/common.o
+next_couleur        0x3               ../common/common.o
+couleur_en_cours    0x3               ../common/common.o
+RGB_red             0x3               ../common/common.o
+zombies_seen        0x12c             zombie.o
+RGB_blue            0x3               ../common/common.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x00000000         0x00002000         xr
+data             0x00800060         0x0000ffa0         rw !x
+eeprom           0x00810000         0x00010000         rw !x
+fuse             0x00820000         0x00000400         rw !x
+lock             0x00830000         0x00000400         rw !x
+signature        0x00840000         0x00000400         rw !x
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+LOAD ../common/common.o
+LOAD zombie.o
+LOAD /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a
+LOAD /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a
+LOAD /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x00000000     0x16c2
+ *(.vectors)
+ .vectors       0x00000000       0x1e /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+                0x00000000                __vectors
+                0x00000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ *(.progmem*)
+                0x0000001e                . = ALIGN (0x2)
+                0x0000001e                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x0000001e        0x0 linker stubs
+ *(.trampolines*)
+                0x0000001e                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x0000001e                __ctors_start = .
+ *(.ctors)
+                0x0000001e                __ctors_end = .
+                0x0000001e                __dtors_start = .
+ *(.dtors)
+                0x0000001e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x0000001e        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+                0x0000001e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x0000001e        0xc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x0000002a       0x16 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+                0x0000002a                __do_copy_data
+ .init4         0x00000040       0x10 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+                0x00000040                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x00000050        0x4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+ *(.init9)
+ *(.text)
+ .text          0x00000054        0x2 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+                0x00000054                __vector_1
+                0x00000054                __vector_12
+                0x00000054                __bad_interrupt
+                0x00000054                __vector_6
+                0x00000054                __vector_3
+                0x00000054                __vector_11
+                0x00000054                __vector_13
+                0x00000054                __vector_7
+                0x00000054                __vector_5
+                0x00000054                __vector_9
+                0x00000054                __vector_8
+                0x00000054                __vector_14
+                0x00000054                __vector_10
+ .text          0x00000056      0xe7c ../common/common.o
+                0x00000056                isr_button_off
+                0x00000076                isr_button_on
+                0x00000096                IR_rx_on_tx_off
+                0x0000012a                IR_rx_off_tx_on
+                0x000001be                rgb_led_on
+                0x00000262                rgb_led_off
+                0x000002be                send_NEC
+                0x00000308                send_NEC_char
+                0x0000036a                rcv_IR
+                0x000004bc                reset_reception
+                0x00000530                write_data
+                0x00000722                mark
+                0x00000770                space
+                0x000007be                __vector_2
+                0x00000866                __vector_4
+                0x00000970                analyse_temps
+                0x00000cca                rgb_mode
+                0x00000e76                init_colors
+ .text          0x00000ed2      0x774 zombie.o
+                0x00000ed2                tempo_ten_us
+                0x00000f52                main
+                0x000010aa                configuration
+                0x0000112a                analyse_trame
+                0x000011aa                action
+                0x00001266                update_health
+                0x000013f2                clean_tab
+                0x0000144a                update_status
+                0x00001510                read_status
+                0x00001572                medic_time
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_mulhi3.o)
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_udivmodhi4.o)
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+ .text          0x00001646        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+                0x00001646                . = ALIGN (0x2)
+ *(.text.*)
+ .text.libgcc   0x00001646       0x24 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_mulhi3.o)
+                0x00001646                __mulhi3
+ .text.libgcc   0x0000166a       0x28 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_udivmodhi4.o)
+                0x0000166a                __udivmodhi4
+ .text.libgcc   0x00001692        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+ .text.libgcc   0x00001692        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+ .text.libgcc   0x00001692        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x00001692       0x10 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+                0x00001692                __eerd_byte_tn85
+ .text.avr-libc
+                0x000016a2       0x1c /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+                0x000016a2                __eewr_byte_tn85
+                0x000016a4                __eewr_r18_tn85
+                0x000016be                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x000016be        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+                0x000016be                exit
+                0x000016be                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x000016be        0x4 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+ *(.fini0)
+                0x000016c2                _etext = .
+
+.data           0x00800060        0x2 load address 0x000016c2
+                0x00800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x00800060        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+ .data          0x00800060        0x0 ../common/common.o
+ .data          0x00800060        0x2 zombie.o
+                0x00800060                MY_STATE_COMP
+                0x00800061                MY_ID_zombie_COMP
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_mulhi3.o)
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_udivmodhi4.o)
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+ .data          0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+ *(.data*)
+ *(.rodata)
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x00800062                . = ALIGN (0x2)
+                0x00800062                _edata = .
+                0x00800062                PROVIDE (__data_end, .)
+
+.bss            0x00800062      0x161
+                0x00800062                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x00800062        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+ .bss           0x00800062        0x3 ../common/common.o
+                0x00800062                interrupt_occured
+                0x00800063                temps_mesure
+                0x00800064                rgb_count
+ .bss           0x00800065        0x9 zombie.o
+                0x00800065                MY_STATE
+                0x00800066                MY_ID_zombie
+                0x00800067                updates
+                0x00800068                refresh_counter
+                0x00800069                total_infection
+                0x0080006b                MEDIC_FLAG
+                0x0080006c                respawn_medic
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_mulhi3.o)
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_udivmodhi4.o)
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+ .bss           0x0080006e        0x0 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x0080006e       0x29 ../common/common.o
+                0x0080006e                RGB_green
+                0x00800071                RGB_off
+                0x00800074                RGB_alternative_rcv
+                0x00800077                state
+                0x0080007c                ir_rcv
+                0x00800088                RGB_alternative_emt
+                0x0080008b                next_couleur
+                0x0080008e                couleur_en_cours
+                0x00800091                RGB_red
+                0x00800094                RGB_blue
+ COMMON         0x00800097      0x12c zombie.o
+                0x00800097                zombies_seen
+                0x008001c3                PROVIDE (__bss_end, .)
+                0x000016c2                __data_load_start = LOADADDR (.data)
+                0x000016c4                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x008001c3        0x0
+                0x008001c3                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x008001c3                PROVIDE (__noinit_end, .)
+                0x008001c3                _end = .
+                0x008001c3                PROVIDE (__heap_start, .)
+
+.eeprom         0x00810000        0x0
+ *(.eeprom*)
+                0x00810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x00000000     0x2bec
+ *(.stab)
+ .stab          0x00000000      0x6cc /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+ .stab          0x000006cc     0x14f4 ../common/common.o
+                               0x1500 (size before relaxing)
+ .stab          0x00001bc0      0xeb8 zombie.o
+                               0x10bc (size before relaxing)
+ .stab          0x00002a78       0x90 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+                                 0x9c (size before relaxing)
+ .stab          0x00002b08       0xe4 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+                                 0xf0 (size before relaxing)
+
+.stabstr        0x00000000     0x1180
+ *(.stabstr)
+ .stabstr       0x00000000     0x1180 /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment
+ *(.comment)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(zombie.elf elf32-avr)
+LOAD linker stubs
+
+Cross Reference Table
+
+Symbol                                            File
+IR_rx_off_tx_on                                   ../common/common.o
+                                                  zombie.o
+IR_rx_on_tx_off                                   ../common/common.o
+                                                  zombie.o
+MEDIC_FLAG                                        zombie.o
+MY_ID_zombie                                      zombie.o
+MY_ID_zombie_COMP                                 zombie.o
+MY_STATE                                          zombie.o
+MY_STATE_COMP                                     zombie.o
+RGB_alternative_emt                               zombie.o
+                                                  ../common/common.o
+RGB_alternative_rcv                               zombie.o
+                                                  ../common/common.o
+RGB_blue                                          zombie.o
+                                                  ../common/common.o
+RGB_green                                         zombie.o
+                                                  ../common/common.o
+RGB_off                                           zombie.o
+                                                  ../common/common.o
+RGB_red                                           zombie.o
+                                                  ../common/common.o
+__bad_interrupt                                   /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__bss_end                                         /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+__bss_start                                       /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+__data_end                                        /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+__data_load_start                                 /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+__data_start                                      /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+__do_clear_bss                                    /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_clear_bss.o)
+                                                  zombie.o
+                                                  ../common/common.o
+__do_copy_data                                    /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_copy_data.o)
+                                                  zombie.o
+__eerd_byte_tn85                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eerd_byte_attiny85.o)
+                                                  zombie.o
+__eewr_byte_tn85                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+                                                  zombie.o
+__eewr_r18_tn85                                   /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/libc.a(eewr_byte_attiny85.o)
+__heap_end                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__init                                            /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__mulhi3                                          /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_mulhi3.o)
+                                                  zombie.o
+__stack                                           /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__udivmodhi4                                      /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_udivmodhi4.o)
+                                                  zombie.o
+                                                  ../common/common.o
+__vector_1                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_10                                       /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_11                                       /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_12                                       /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_13                                       /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_14                                       /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_2                                        ../common/common.o
+                                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_3                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_4                                        ../common/common.o
+                                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_5                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_6                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_7                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_8                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_9                                        /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vector_default                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+__vectors                                         /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+_exit                                             /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+action                                            zombie.o
+analyse_temps                                     ../common/common.o
+analyse_trame                                     zombie.o
+clean_tab                                         zombie.o
+configuration                                     zombie.o
+couleur_en_cours                                  zombie.o
+                                                  ../common/common.o
+exit                                              /usr/lib/gcc/avr/4.5.3/avr25/libgcc.a(_exit.o)
+                                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+init_colors                                       ../common/common.o
+                                                  zombie.o
+interrupt_occured                                 ../common/common.o
+ir_rcv                                            zombie.o
+                                                  ../common/common.o
+isr_button_off                                    ../common/common.o
+isr_button_on                                     ../common/common.o
+main                                              zombie.o
+                                                  /usr/lib/gcc/avr/4.5.3/../../../avr/lib/avr25/crttn85.o
+mark                                              ../common/common.o
+medic_time                                        zombie.o
+next_couleur                                      zombie.o
+                                                  ../common/common.o
+rcv_IR                                            ../common/common.o
+                                                  zombie.o
+read_status                                       zombie.o
+refresh_counter                                   zombie.o
+reset_reception                                   ../common/common.o
+                                                  zombie.o
+respawn_medic                                     zombie.o
+rgb_count                                         ../common/common.o
+rgb_led_off                                       ../common/common.o
+rgb_led_on                                        ../common/common.o
+                                                  zombie.o
+rgb_mode                                          ../common/common.o
+send_NEC                                          ../common/common.o
+                                                  zombie.o
+send_NEC_char                                     ../common/common.o
+space                                             ../common/common.o
+state                                             zombie.o
+                                                  ../common/common.o
+tempo_ten_us                                      zombie.o
+                                                  ../common/common.o
+temps_mesure                                      ../common/common.o
+total_infection                                   zombie.o
+update_health                                     zombie.o
+update_status                                     zombie.o
+updates                                           zombie.o
+write_data                                        ../common/common.o
+zombies_seen                                      zombie.o
